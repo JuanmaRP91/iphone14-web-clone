@@ -1,14 +1,8 @@
 import React from "react";
 
-function SoundSection() {
+const SoundSection = () => {
   const handleLearnMore = () => {
-    const element = document.querySelector(".display-section");
-
-    window.scrollTo({
-      top: element?.getBoundingClientRect().top,
-      left: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo(0, document.body.scrollHeight);
   };
 
   return (
@@ -16,7 +10,7 @@ function SoundSection() {
       <div className="body">
         <div className="sound-section-content content">
           <h2 className="title">New Sound System</h2>
-          <p className="text">Feel the base.</p>
+          <p className="text">Feel the base</p>
           <span className="description">
             From $41.62/mo. for 24 mo. or $999 before trade-in
           </span>
@@ -26,7 +20,7 @@ function SoundSection() {
             </li>
             <li>
               <a className="link" onClick={handleLearnMore}>
-                Learn more
+                Learn More
               </a>
             </li>
           </ul>
@@ -34,6 +28,6 @@ function SoundSection() {
       </div>
     </div>
   );
-}
+};
 
 export default SoundSection;
